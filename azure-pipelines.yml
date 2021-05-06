@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: centos-latest
+  vmImage: 09157-vm-skt-dev-centos
 
 steps:
 - script: echo Hello, world!
