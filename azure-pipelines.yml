@@ -4,7 +4,7 @@ jobs:
   pool:
     vmImage: 'Ubuntu-18.04'
   environment:
-    name: 09157-azure-cicd
+    name: 09157-Azure-cicd_ubuntu
     resourceType: VirtualMachine
   strategy:
       runOnce:
