@@ -10,5 +10,4 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - script: git clone https://github.com/ys-ko/photoBoard.git
-          - script: cp -p /appsrc/index.html /appsrc/photoBoard/.
+          - script: cd /appsrc; git clone https://github.com/ys-ko/photoBoard.git
