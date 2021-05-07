@@ -1,19 +1,13 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
-pool:
-  vmImage: centos-8_2
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+jobs:
+- deployment: VMDeploy
+  displayName: web
+  pool:
+    vmImage: 'Ubuntu-18.04'
+  environment:
+    name: 09157-azure-cicd
+    resourceType: VirtualMachine
+  strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: cp -p index.html /appsrc
