@@ -10,4 +10,4 @@ jobs:
       runOnce:
         deploy:
           steps:
-          - script: cp -p index.html /appsrc
+          - script: cp -p /appsrc/index.html /appsrc/photoBoard
